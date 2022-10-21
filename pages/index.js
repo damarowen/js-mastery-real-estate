@@ -61,7 +61,6 @@ const Home = ({propertiesForSale, propertiesForRent}) => {
   //* fetch API
 export async function getStaticProps() {
   const propertyForSale = await fetchApi(`${baseUrl}/properties/list?locationExternalIDs=5002&purpose=for-sale&hitsPerPage=6`);
-  console.log(propertyForSale, "<<<<")
   const propertyForRent = await fetchApi(`${baseUrl}/properties/list?locationExternalIDs=5002&purpose=for-rent&hitsPerPage=6`);
 
   return {
